@@ -1,0 +1,11 @@
+{%extends "layout.html"%}
+{%block myhead%}
+<title>Index Page</title>
+{%endblock%}
+{%block mybody%}
+<ul>
+  {%for item in items%}
+  <li>{{item}}</li>
+  {%endfor%}
+</ul>
+{%endblock%}

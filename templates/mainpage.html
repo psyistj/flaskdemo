@@ -1,0 +1,16 @@
+{%extends "layout.html"%}
+{%block myhead%}
+<title>Main Page</title>
+{%endblock%}
+{%block mybody%}
+<h2>Fruit List</h2>
+<ul>
+  {%for fruit in fruits%}
+  <li>{{fruit}}</li>
+  {%endfor%}
+</ul>
+<form action="{{url_for('mainpage')}}" method="post">
+  <input type="text" name="fruit" placeholder="Enter Fruit">
+  <button>Add Fruit</button>
+</form>
+{%endblock%}
